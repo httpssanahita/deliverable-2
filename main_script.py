@@ -3,17 +3,8 @@
 
 import pandas as pd
 
-# Loading the dataset
+# Loading the dataset using pandas module 
 
 data= pd.read_csv (r'C:\Users\anani\OneDrive\Documents\GitHub\deliverable-2\air_quality_health_dataset.csv')
 
-# Attributing numpy arrays to each coloun
-
-#Selecting all rows in a coloumn  using Numpy array slicing 
-col2= data[:,1]
-col3= data[:,2]
-col4= data[:,3]
-col5= data[:,6]
-col6= data[:,7]
-col7= data[:,9]
 
