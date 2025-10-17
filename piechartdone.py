@@ -26,3 +26,4 @@ plt.pie(y, labels = mylabels)
 
 # We started by counting how many data points corresponded to each population density indicators using a for loop.
 # Then using the list comprising of the counts, we plotted a pie chart that represent how many data point were taken in urban, suburban and rural locations.
+# The resulting pie chart shows us that more than half of the data points were collected from urban locations.
