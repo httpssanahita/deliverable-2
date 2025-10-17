@@ -1,6 +1,6 @@
-
 # Extracting a sample of values of Air quality index and daily average temperature variable corresponding to the year 2025 and observing the correlation coefficient by creating a scatter plot
 # Observing how the air quality index varies with daily average temperature
+
 # Introducing modules for data manipulation
 
 import pandas as pd
@@ -17,6 +17,7 @@ data['Year']= data['date'].dt.year # Extracting only the year value using the .d
 Urban_2025 = data[( data['population_density']== 'Urban') & (data['Year']==2025) ]# Selecting the rows only with urban values in the population density column in the year 2025 
 
 #creating a Dataframe to selection columns for scatter plot
+
 Urban_df= Urban_2025[['aqi','temperature']]
 
 # Plotting a scatter plot 
@@ -31,6 +32,8 @@ plt.ylabel("Air Quality Index (AQI)")
 plt.grid(True)
 plt.show()
 
+# Comment on the scatter plot
+#The generated scatter plot of AQI vs temperature in urban areas for 2025 is highly scattered, showing that AQI values vary considerably even at similar temperatures.
 
 
 
@@ -42,4 +45,3 @@ plt.show()
 
 
 
-# Plot interpretation

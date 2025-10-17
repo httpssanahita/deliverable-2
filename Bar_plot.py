@@ -1,5 +1,7 @@
 
+
 # Comparing the mean of the hospital admissions in rural and urban areas from 2020 to 2023
+
 
 # Introducing modules for data manipulation
 
@@ -28,7 +30,7 @@ print(data[['date', 'Year']])
 print(data_filtering_Q1)
 
 # Grouping the population density (area type) with the Year
-Num_Row = len(data)
+
 
 Rural = data_filtering_Q1[data_filtering_Q1['population_density'] == 'Rural'] #Creating a new dataset where the population denisty column only including rural area.
 Urban = data_filtering_Q1[data_filtering_Q1['population_density'] == 'Urban'] #Creating a new dataset where the population denisty column only including urban area.
@@ -68,6 +70,5 @@ plt.legend(title="Area")
 plt.show()
 
 # The significace of the plot
-# Returning to the analyze question, we can not fully  confirm that the number of the hospital admissions in the rural region is lower than the ones of in urban region. The manipulation of the data demonstrates quite the opposite.
 # By taking a sample of hospital admissions between the year 2020 and 2023, the generated bar plot shows a gradual decrease of the hospotial admission in the rural region as each year passes while they remain greater than the records of the urban region. This is true up until the 2023, where the average hospital admissions is higher than the rural mean.
 
