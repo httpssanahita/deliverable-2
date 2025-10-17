@@ -12,10 +12,9 @@ data= pd.read_csv (r'C:\Users\anani\OneDrive\Documents\GitHub\deliverable-2\air_
 
 #Inspecting data
 
-print(data.colunms) 
 print(data.head(3))
-print(data.info)
-
+print(data.info) 
+print(data.columns)
 
 # Filtering the dataset for the years from 2020 to 2023
 
