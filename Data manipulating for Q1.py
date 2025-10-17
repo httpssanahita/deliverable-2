@@ -1,12 +1,15 @@
 # Analyze question: Is the number of respiratory hospital admissions in rural regions lower compared to the records of the urban areas?
-# Comparing the mean of the records in each areas over 2 years
+# Comparing the mean of the records in each areas over 4 years
 
 # Introducing modules for data manipulation
 
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Loading the data using Pandad module
+
 data= pd.read_csv (r'C:\Users\anani\OneDrive\Documents\GitHub\deliverable-2\air_quality_health_dataset.csv')
+
 #Inspecting data
 
 print(data.colunms) 
@@ -16,20 +19,20 @@ print(data.info)
 
 # Filtering the dataset for the years from 2020 to 2023
 
-data['date']= pd.to_datetime(data['date']) #Converting the data colunm into datetime using to_datetime function
+data['date']= pd.to_datetime(data['date']) #Converting the date colunm into datetime using to_datetime function
 data['Year']= data['date'].dt.year # Extracting only the year value using the .dt.year accessor, thus creating a new colunm for it
-data_filtering = data[(data['Year']>=2020) & (data['Year']<= 2023)].copy() # Selecting the years we are intressted in and making a copy of the dataset to not modify the original.
+data_filtering_Q1 = data[(data['Year']>=2020) & (data['Year']<= 2023)].copy() # Selecting the years we are intressted in and making a copy of the dataset to not modify the original.
 
 
 print(data[['date', 'Year']])
 
-print(data_filtering)
+print(data_filtering_Q1)
 
 # Grouping the population density (area type) with the Year
 Num_Row = len(data)
 
-Rural = data_filtering[data_filtering['population_density'] == 'Rural'] #Creating a new dataset where the population denisty column only including rural area.
-Urban = data_filtering[data_filtering['population_density'] == 'Urban'] #Creating a new dataset where the population denisty column only including urban area.
+Rural = data_filtering_Q1[data_filtering_Q1['population_density'] == 'Rural'] #Creating a new dataset where the population denisty column only including rural area.
+Urban = data_filtering_Q1[data_filtering_Q1['population_density'] == 'Urban'] #Creating a new dataset where the population denisty column only including urban area.
 
 # Extracing the mean value of the hospital admissions data of each area type for from 2020 to 2023
 # Each line of code use the function loc. known as location to locate the rows corresponding to the targated year then including its hospital admission data
